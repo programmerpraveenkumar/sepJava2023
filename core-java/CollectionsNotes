@@ -1,0 +1,20 @@
+Collection will not allow primitive data type(int,long,float,double,char,boolean,short)
+So Collection wil accept only objects and wrapper classes
+
+wrapper classes:
+        Integer,Long,Float,Double,Char,Boolean,Short
+
+
+list
+        arraylist,linkedlist,vector
+set
+        will not allow the duplicates
+        hashSet,LinkedHashSet,TreeSet
+
+map<key,value>
+    hashMap,LinkedHashMap,TreeMap
+
+
+
+queue(FIFO)
+stack(LIFO)
