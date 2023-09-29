@@ -12,6 +12,7 @@ public class ArrayListSample {
         intList.add(20);//add the data to the list
         intList.add(30);//add the data to the list
         intList.add(40);//add the data to the list
+        intList.add(40);//add the data to the list
         System.out.println(intList);
         System.out.println(intList.size());
 
