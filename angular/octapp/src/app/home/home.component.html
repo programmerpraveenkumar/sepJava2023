@@ -1,0 +1,13 @@
+<app-header></app-header>
+<h1>this is home component</h1>
+<button (click)="getDataFromServer()">Click to call Rest api </button>
+
+<div>
+    <input type="text" [(ngModel)]="name" placeholder="Enter Name">
+    <input type="text" [(ngModel)]="job"  placeholder="Enter Job">
+    <input type="button" (click)="createUser()" value="Click to create User">
+</div>
+
+<div *ngFor="let obj of userList">
+{{obj.first_name}}--{{obj['email']}}
+</div>

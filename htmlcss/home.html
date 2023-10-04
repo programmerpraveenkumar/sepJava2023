@@ -1,0 +1,22 @@
+<html>
+<head>    
+    <title>oct web app</title>
+    <script>
+        function validate(){
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            if(username == ""){
+                alert("username should not be empty");
+            }else if(email == ""){
+                alert("Email should not be empty");                
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>this is heading tag</h1>
+    <input type="text" name="" placeholder="Enter UserName" id="username">
+    <input type="text" name="" placeholder="Enter Email"  id="email">
+    <button onclick="validate()">Click to validate</button>
+</body>
+</html>
