@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
 
   constructor() { }
+  pageName ="this is contact component";
+  currentDate = new Date();//current date
+  price = 50;
+  num =10;
 
   ngOnInit(): void {
   }
-
+  recvParent(event:any){
+      console.log(event);//from child to parent
+  }
 }

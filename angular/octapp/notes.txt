@@ -13,6 +13,18 @@ each component constists of
 
 ng g c home -> create component 
 ng g s Common -> create a service(will not have any UI elements) 
+ng g p square -> create pipe in the project
+
+
+data exchange:
+    from parent to child component
+    homeComponent  -> headerComponent -> sharing the data 
+    @Input() --> decorator
+
+    child to parent.
+    @Output()-. inthe child component
+
+child to parent
 
 
 

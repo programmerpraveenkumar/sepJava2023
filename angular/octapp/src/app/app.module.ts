@@ -11,6 +11,8 @@ import { HeaderComponent } from './header/header.component';
 import {HttpClientModule} from '@angular/common/http'; 
 //for adding ngModel should use below module
 import { FormsModule } from '@angular/forms';
+import { SquarePipe } from './square.pipe';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    SquarePipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

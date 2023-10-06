@@ -1,2 +1,8 @@
-<app-header></app-header>
-<h1>this is contact component</h1>
+<app-header fromParent="from contactc comnponent to header"></app-header>
+<h1>{{pageName | uppercase}}</h1>
+
+<h1>{{currentDate |date :'shortTime'}}</h1>
+
+<h3>Price is {{this.price | currency : 'CAD'}}</h3>
+<h1>Square pipe {{num | square}}</h1>
+<app-footer (toParent)="recvParent($event)"></app-footer>
