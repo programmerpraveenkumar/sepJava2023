@@ -29,7 +29,7 @@ public class UserService {
             UserModel userModel = userRepo.findById(userRequest.getId()).orElseThrow(()->new Exception("No User Found"));
             if(userRequest.getName() != null && !userRequest.getName().equals("")){
                 userModel.setName(userRequest.getName());
-            }if(userRequest.getEmail() != null && userRequest.getEmail().equals("")){
+            }if(userRequest.getEmail() != null && !userRequest.getEmail().equals("")){
                 userModel.setEmail(userRequest.getEmail());
             }
             userRepo.save(userModel);
@@ -37,6 +37,10 @@ public class UserService {
             e.printStackTrace();
             throw e;
         }
+    }
+    public Boolean login(String email,String password) throws Exception{
+        UserModel userModel = userRepo.login(email,password).orElseThrow(()->new Exception("No User Found"));
+        return true;
     }
     public void deleteUser(Long userId)throws Exception{
         try{
@@ -50,11 +54,5 @@ public class UserService {
     public List<UserModel> getUserList(){
         return userRepo.findAll();//get all records from the user table.
     }
-    public boolean login(String email,String password)throws Exception{
-        if(email.equals("test@gmail.com") && password.equals("test")){
-            return true;
-        }else{
-            throw new Exception("Email or password is wrong.");
-        }
-    }
+
 }

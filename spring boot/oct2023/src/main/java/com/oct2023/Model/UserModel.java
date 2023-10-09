@@ -1,5 +1,7 @@
 package com.oct2023.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,6 +11,17 @@ public class UserModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name,email;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @JsonIgnore
+    String password;
     public Long getId() {
         return id;
     }

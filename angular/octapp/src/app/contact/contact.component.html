@@ -5,4 +5,29 @@
 
 <h3>Price is {{this.price | currency : 'CAD'}}</h3>
 <h1>Square pipe {{num | square}}</h1>
+<div>
+    
+
+    <div>
+        <h1>User Create</h1>
+        <input type="text" placeholder="Ente name" [(ngModel)]="name">
+        <input type="text" placeholder="Ente Email" [(ngModel)]="email">
+        <input type="button" value="Create Or Update" (click)="createUser()">
+    </div>
+
+
+
+
+    <!-- 
+        get -- http://localhost:8080/getUserList
+     -->
+     <button (click)="getUserList()">Get User List</button>
+     <div *ngFor="let user of userList" style="border:1px solid #000;margin:10px;">
+        {{user.id}} {{user.name}} -- {{user.email}} 
+        <div>
+            <button (click)="update(user)">update</button>
+            <button (click)="deleteUser(user.id)">Delete</button>
+        </div>
+     </div>
+</div>
 <app-footer (toParent)="recvParent($event)"></app-footer>

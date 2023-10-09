@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.xml.ws.Response;
 
 @RestController
+@CrossOrigin(origins ="*")
 public class UserController {
 
     //below autowired will create object for userService
