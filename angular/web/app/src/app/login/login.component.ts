@@ -14,6 +14,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  add(a:number,b:number){
+      return a+b;
+  }
 
   login_validate(){
     this.message = '';
